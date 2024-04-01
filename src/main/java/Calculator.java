@@ -23,15 +23,20 @@ public class Calculator {
 
     public String rubleFormat(float price){
         int check = (int) price;
-        String result = "";
-        if (check % 10 == 1){
-            result = "рубль";
-        } else if (check % 10 >= 2 && check % 10 <= 4) {
-            result = "рубля";
-        }
-        else {
+        String result = "ОшИбКаааааААаАаА";
+        if (check % 100 >= 11 && check % 100 <= 19){
             result = "рублей";
         }
+        else if (check % 10 == 1){
+            result = "рубль";
+        }
+        else if (check % 10 >= 2 && check % 10 <= 4) {
+            result = "рубля";
+        }
+        else{
+            result = "рублей";
+        }
+
         return result;
     }
 }
